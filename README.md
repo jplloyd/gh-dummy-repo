@@ -2,8 +2,12 @@
 Dummy github repository - used to test out CI and github API stuff
 
 [Link to the first section](#this-is-a-section)
+
 [Link to the second section](#this-another-section)
+
 [Alt Link to the second section](#this/another/section)
+
+[Alt Alt Link to the second section](#thisanothersection)
 
 ---
 ok
