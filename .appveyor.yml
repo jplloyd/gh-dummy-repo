@@ -57,11 +57,8 @@ for:
 #    Run build commands     #
 #---------------------------#
 
-init:
-  - bash -c 'mkdir -p out; pwd; ls;'
-
 install:
-  - bash -c 'echo "$APPVEYOR_BUILD_FOLDER" > out/1_initial.txt'
+  - bash -c 'mkdir -p out; pwd; ls; echo "$APPVEYOR_BUILD_FOLDER" > out/1_initial.txt;'
 
 build_script:
   - bash -c 'echo "$ARCH $MSYSTEM" > out/2_building.txt'
