@@ -29,14 +29,14 @@ image: Ubuntu
 clone_depth: 10
 
 matrix:
-fast_finish: true
+  fast_finish: true
 
 environment:
-matrix:
-  - ARCH: 32bit
-    MSYSTEM: Ubuntu32
-  - ARCH: 64bit
-    MSYSTEM: Ubuntu64
+  matrix:
+    - ARCH: 32bit
+      MSYSTEM: Ubuntu32
+    - ARCH: 64bit
+      MSYSTEM: Ubuntu64
 
 
 for:
