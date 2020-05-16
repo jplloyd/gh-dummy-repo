@@ -43,8 +43,8 @@ for:
 -
   matrix:
     except:
-      - ARCH: 64bit
       - APPVEYOR_REPO_TAG: true
+        ARCH: 64bit
   only_commits:
     files:
       - lib/*.cpp
@@ -67,7 +67,7 @@ build_script:
   - bash -c 'echo "$ARCH $MSYSTEM" > out/2_building.txt;'
 
 test_script:
-  - bash -c 'echo "Now testing $ARCH $MSYSTEM" > out/3_building.txt;'
+  - bash -c 'echo "Now testing $ARCH $MSYSTEM + $APPVEYOR_REPO_TAG" > out/3_testing.txt;'
 
 after_test:
   - bash -c "ls * > out/4_final.txt;"
