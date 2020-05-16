@@ -57,17 +57,20 @@ for:
 #    Run build commands     #
 #---------------------------#
 
+init:
+  - echo "Initiating sequence"
+
 install:
   - bash -c 'mkdir -p out; pwd; ls; echo "$APPVEYOR_BUILD_FOLDER" > out/1_initial.txt;'
 
 build_script:
-  - bash -c 'echo "$ARCH $MSYSTEM" > out/2_building.txt'
+  - bash -c 'echo "$ARCH $MSYSTEM" > out/2_building.txt;'
 
 test_script:
-  - bash -c 'echo "Now testing $ARCH $MSYSTEM" > out/3_building.txt'
+  - bash -c 'echo "Now testing $ARCH $MSYSTEM" > out/3_building.txt;'
 
 after_test:
-  - bash -c "ls *' > out/4_final.txt"
+  - bash -c "ls * > out/4_final.txt;"
 
 
 #---------------------------------#
